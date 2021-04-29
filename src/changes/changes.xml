@@ -40,6 +40,9 @@
       <action dev="a-team" type="add">
         Add navigation bar
       </action>
+      <action dev="a-team" type="update">
+        Update dependency versions
+      </action>
     </release>
 	</body>
 </document>
