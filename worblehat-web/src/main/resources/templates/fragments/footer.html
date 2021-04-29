@@ -6,7 +6,8 @@
 <body>
 
 <footer th:fragment="subpage-footer">
-<!--  <hr/>-->
+  <hr/>
+  <div th:text="'Version: ' + ${@environment.getProperty('info.version')}">Footer</div>
 </footer>
 
 <div th:fragment="version">Version: …</div>
