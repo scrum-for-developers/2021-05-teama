@@ -30,6 +30,9 @@
       <action dev="a-team" type="add">
         Improve Error messages
       </action>
+      <action dev="a-team" type="add">
+        Restructure Homepage
+      </action>
     </release>
 	</body>
 </document>
