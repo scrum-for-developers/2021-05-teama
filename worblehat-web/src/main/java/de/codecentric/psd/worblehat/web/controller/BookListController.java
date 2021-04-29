@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /** Controller class for the book table result. */
 @Controller
-@RequestMapping("/bookList")
+@RequestMapping("/")
 public class BookListController {
 
-  private BookService bookService;
+  private final BookService bookService;
 
   @Autowired
   public BookListController(BookService bookService) {
