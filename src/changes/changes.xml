@@ -43,6 +43,9 @@
       <action dev="a-team" type="update">
         Update dependency versions
       </action>
+      <action dev="a-team" type="add">
+        Show app version in footer
+      </action>
     </release>
 	</body>
 </document>
