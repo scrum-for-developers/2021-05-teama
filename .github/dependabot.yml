@@ -1,0 +1,11 @@
+# Basic dependabot.yml file with
+
+version: 1
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "maven"
+    # Look for `pom.xml`
+    directory: "/"
+    # Check the maven registry for updates every day (weekdays)
+    schedule:
+      interval: "daily"
