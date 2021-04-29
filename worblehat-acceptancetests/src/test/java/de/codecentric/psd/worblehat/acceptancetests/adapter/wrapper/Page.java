@@ -1,7 +1,7 @@
 package de.codecentric.psd.worblehat.acceptancetests.adapter.wrapper;
 
 public enum Page {
-  BOOKLIST("bookList"),
+  BOOKLIST(""),
   INSERTBOOKS("insertBooks"),
   BORROWBOOK("borrow"),
   RETURNBOOKS("returnAllBooks");
