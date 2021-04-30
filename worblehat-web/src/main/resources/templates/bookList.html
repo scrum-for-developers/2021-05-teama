@@ -3,6 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Show all Books</title>
+  <style>
+    table {
+      border-spacing: 0;
+    }
+    th, td {
+      padding: 15px;
+    }
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    tr:nth-child(odd) {
+      background-color: #ffffff;
+    }
+  </style>
 </head>
 <body>
   <div style="display: flex">
@@ -13,7 +27,7 @@
 
       <table class="bookList">
         <thead>
-        <tr>
+        <tr style="background-color: #cbcbcb">
           <th scope="col">ISBN</th>
           <th scope="col">Title</th>
           <th scope="col">Author</th>
