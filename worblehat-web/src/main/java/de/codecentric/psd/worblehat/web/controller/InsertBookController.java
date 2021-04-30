@@ -58,7 +58,7 @@ public class InsertBookController {
         result.reject("duplicateIsbn");
         return "insertBooks";
       }
-      return "redirect:bookList";
+      return "redirect:";
     }
   }
 }
