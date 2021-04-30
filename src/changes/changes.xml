@@ -56,6 +56,9 @@
       <action dev="a-team" type="add">
         Improve book list table coloring
       </action>
+      <action dev="a-team" type="add">
+        Change Default Font to "Fira Sans"
+      </action>
     </release>
 	</body>
 </document>
