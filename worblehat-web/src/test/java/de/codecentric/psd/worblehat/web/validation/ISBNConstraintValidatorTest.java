@@ -16,7 +16,7 @@ class ISBNConstraintValidatorTest {
   private ConstraintValidatorContext constraintValidatorContext;
 
   @BeforeEach
-  public void setUp() throws Exception {
+  public void setUp() {
     isbnConstraintValidator = new ISBNConstraintValidator();
     constraintValidatorContext = mock(ConstraintValidatorContext.class);
   }
@@ -28,20 +28,44 @@ class ISBNConstraintValidatorTest {
   }
 
   @Test
-  void shouldReturnTrueIfBlank() throws Exception {
+  void shouldReturnTrueIfBlank() {
     boolean actual = isbnConstraintValidator.isValid("", constraintValidatorContext);
     assertTrue(actual);
   }
 
   @Test
-  void shouldReturnTrueIfValidISBN() throws Exception {
+  void shouldReturnTrueIfValid10DigitISBN() {
     boolean actual = isbnConstraintValidator.isValid("0132350882", constraintValidatorContext);
     assertTrue(actual);
   }
 
   @Test
-  void shouldReturnFalseIfInvalidISBN() throws Exception {
+  void shouldReturnFalseIfInvalid10DigitISBN() {
     boolean actual = isbnConstraintValidator.isValid("0123459789", constraintValidatorContext);
+    assertFalse(actual);
+  }
+
+  @Test
+  void shouldReturnTrueIfValid13DigitISBN() {
+    boolean actual = isbnConstraintValidator.isValid("9783551354013", constraintValidatorContext);
+    assertTrue(actual);
+  }
+
+  @Test
+  void shouldReturnTrueIfValid13DigitISBNWithSeparators() {
+    boolean actual = isbnConstraintValidator.isValid("978-3-86680-192-9", constraintValidatorContext);
+    assertTrue(actual);
+  }
+
+  @Test
+  void shouldReturnFalseIfInvalid13DigitISBNWithSeparator() {
+    boolean actual = isbnConstraintValidator.isValid("978-3551354013", constraintValidatorContext);
+    assertFalse(actual);
+  }
+
+  @Test
+  void shouldReturnFalseIfInvalid13DigitISBN() {
+    boolean actual = isbnConstraintValidator.isValid("0123459789123", constraintValidatorContext);
     assertFalse(actual);
   }
 }
