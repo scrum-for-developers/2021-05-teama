@@ -8,11 +8,12 @@ import org.apache.commons.validator.routines.ISBNValidator;
 public class ISBNConstraintValidator implements ConstraintValidator<ISBN, String> {
 
   @Override
-  public boolean isValid(String value, ConstraintValidatorContext context) {
+  public boolean isValid(String isbn, ConstraintValidatorContext context) {
     // Don't validate null, empty and blank strings, since these are validated by @NotNull,
     // @NotEmpty and @NotBlank
-    if (StringUtils.isNotBlank(value)) {
-      return ISBNValidator.getInstance().isValidISBN10(value);
+    if (StringUtils.isNotBlank(isbn)) {
+      ISBNValidator validator = ISBNValidator.getInstance();
+      return validator.isValidISBN10(isbn) || validator.isValidISBN13(isbn);
     }
     return true;
   }
