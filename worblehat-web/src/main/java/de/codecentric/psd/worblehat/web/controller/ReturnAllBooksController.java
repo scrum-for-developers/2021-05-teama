@@ -34,7 +34,7 @@ public class ReturnAllBooksController {
       return "returnAllBooks";
     } else {
       bookService.returnAllBooksByBorrower(formData.getEmailAddress());
-      return "home";
+      return "bookList";
     }
   }
 }

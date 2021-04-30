@@ -56,7 +56,7 @@ class InsertBookControllerTest {
   }
 
   @Test
-  void shouldCreateBookAndNavigateToBookList() {
+  void shouldCreateBookAndNavigateToHome() {
     setupFormData();
     when(bookService.createBook(any(), any(), any(), any(), anyInt()))
         .thenReturn(Optional.of(TEST_BOOK));
@@ -64,7 +64,7 @@ class InsertBookControllerTest {
     String navigateTo = insertBookController.processSubmit(bookDataFormData, bindingResult);
 
     verifyBookIsCreated();
-    assertThat(navigateTo, is("redirect:bookList"));
+    assertThat(navigateTo, is("redirect:"));
   }
 
   @Test

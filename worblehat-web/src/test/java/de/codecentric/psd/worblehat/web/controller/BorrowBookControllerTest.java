@@ -96,7 +96,7 @@ class BorrowBookControllerTest {
 
     String navigateTo = borrowBookController.processSubmit(bookBorrowFormData, bindingResult);
     verify(bookService).borrowBook(TEST_BOOK.getIsbn(), BORROWER_EMAIL);
-    assertThat(navigateTo, is("home"));
+    assertThat(navigateTo, is("bookList"));
   }
 
   @Test
@@ -104,6 +104,6 @@ class BorrowBookControllerTest {
     String navigateTo =
         borrowBookController.handleErrors(new Exception(), new MockHttpServletRequest());
 
-    assertThat(navigateTo, is("home"));
+    assertThat(navigateTo, is("bookList"));
   }
 }

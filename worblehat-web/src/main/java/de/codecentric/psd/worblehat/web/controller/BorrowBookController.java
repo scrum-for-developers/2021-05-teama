@@ -50,7 +50,7 @@ public class BorrowBookController {
         bookService.borrowBook(borrowFormData.getIsbn(), borrowFormData.getEmail());
 
     return borrowing
-        .map(b -> "home")
+        .map(b -> "bookList")
         .orElseGet(
             () -> {
               result.rejectValue("isbn", "noBorrowableBooks");
@@ -60,6 +60,6 @@ public class BorrowBookController {
 
   @ExceptionHandler(Exception.class)
   public String handleErrors(Exception ex, HttpServletRequest request) {
-    return "home";
+    return "bookList";
   }
 }
