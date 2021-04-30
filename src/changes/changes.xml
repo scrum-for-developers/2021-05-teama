@@ -53,6 +53,9 @@
       <action dev="a-team" type="add">
         Allow 13 digit ISBN
       </action>
+      <action dev="a-team" type="add">
+        Improve book list table coloring
+      </action>
     </release>
 	</body>
 </document>
