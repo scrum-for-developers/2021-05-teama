@@ -47,5 +47,12 @@
         Show app version in footer
       </action>
     </release>
+
+    <release version="1.3" date="2021-04-30"
+      description="13-digit ISBN">
+      <action dev="a-team" type="add">
+        Allow 13 digit ISBN
+      </action>
+    </release>
 	</body>
 </document>
